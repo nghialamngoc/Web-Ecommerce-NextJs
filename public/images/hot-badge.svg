@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25.645" height="28.817" viewBox="0 0 25.645 28.817">
+  <g id="hot-badge" transform="translate(-1507.355 -277)">
+    <path id="Path_659" data-name="Path 659" d="M-558.443,393.386l-10.462-7.6a1.084,1.084,0,0,0-1.274,0l-10.464,7.6a1.084,1.084,0,0,1-1.722-.877V365.863a1.085,1.085,0,0,1,1.085-1.084h23.474a1.085,1.085,0,0,1,1.086,1.084v26.646A1.085,1.085,0,0,1-558.443,393.386Z" transform="translate(2089.72 -87.779)" fill="#ffbf43"/>
+    <text id="Hot" transform="translate(1509.9 292)" fill="#fff" font-size="9" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="0" y="0">HOT</tspan></text>
+  </g>
+</svg>

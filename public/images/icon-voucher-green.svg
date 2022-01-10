@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19.666" height="15.933" viewBox="0 0 19.666 15.933">
+  <g id="icon-voucher-green" transform="translate(254.5 -707.5)">
+    <path id="Path_257" data-name="Path 257" d="M-237.667,715.933a2.333,2.333,0,0,1,2.333-2.333v-.933c0-3.733-.933-4.667-4.667-4.667h-9.333c-3.733,0-4.667.933-4.667,4.667v.467a2.333,2.333,0,0,1,2.333,2.333A2.333,2.333,0,0,1-254,717.8v.467c0,3.733.933,4.667,4.667,4.667H-240c3.733,0,4.667-.933,4.667-4.667A2.333,2.333,0,0,1-237.667,715.933Z" transform="translate(0 0)" fill="none" stroke="#00be84" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <g id="Group_875" data-name="Group 875" transform="translate(-247.809 712.619)">
+      <path id="Path_258" data-name="Path 258" d="M-241,718.884H-241" transform="translate(246.943 -713.345)" fill="none" stroke="#00be84" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="Path_259" data-name="Path 259" d="M-247,713.884H-247" transform="translate(247.343 -713.011)" fill="none" stroke="#00be84" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="Path_260" data-name="Path 260" d="M-247.367,719.234l6.285-6.285" transform="translate(247.367 -712.949)" fill="none" stroke="#00be84" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

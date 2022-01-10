@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15.471" height="20.792" viewBox="0 0 15.471 20.792">
+  <g id="icon-lock" transform="translate(0.625 0.625)">
+    <rect id="Rectangle_2299" data-name="Rectangle 2299" width="14.221" height="11.108" rx="3" transform="translate(0 8.433)" fill="none" stroke="#373737" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+    <g id="Group_860" data-name="Group 860" transform="translate(5.497 11.375)">
+      <circle id="Ellipse_56" data-name="Ellipse 56" cx="1.613" cy="1.613" r="1.613" transform="translate(0 0)" fill="none" stroke="#373737" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+      <line id="Line_36" data-name="Line 36" y2="2.265" transform="translate(1.613 3.227)" fill="none" stroke="#373737" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+    </g>
+    <path id="Path_250" data-name="Path 250" d="M533.741,82.916V79.128c0-6.193,10.432-6.193,10.432,0v3.788" transform="translate(-531.847 -74.482)" fill="none" stroke="#373737" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+  </g>
+</svg>
