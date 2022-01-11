@@ -1,14 +1,26 @@
 import { Image } from '@chakra-ui/image'
-import { Flex, Grid, GridItem } from '@chakra-ui/layout'
+import { Box, Flex, Grid, GridItem } from '@chakra-ui/layout'
 import { NextPage } from 'next'
+import { relative } from 'path/posix'
+import { useMemo } from 'react'
+import { useSelector } from 'react-redux'
 import CONFIG from '../../constants/config'
 import styles from './NavBar.module.scss'
 
 const NavBar: NextPage = () => {
   const isLogin = false
+  const cart = useSelector((state: any) => state.cart)
+
+  const cartItems = useMemo(() => {
+    return cart?.detail || []
+  }, [cart])
 
   return (
-    <Flex justifyContent="center">
+    <Flex
+      justifyContent="center"
+      borderBottom="1px solid rgba(192, 194, 203, 0.5);"
+      boxShadow="0 1px 5px rgb(0 0 0 / 16%);"
+    >
       <Flex
         className="container"
         w="100%"
@@ -46,27 +58,41 @@ const NavBar: NextPage = () => {
           </GridItem>
           <GridItem w="100%">
             <Flex flexDir="row" justifyContent="flex-end" alignItems="center">
-              <a href="#" data-target="#header-search">
+              <a href="#" data-target="#header-search" className={styles.icon}>
                 <Image
                   src={`${CONFIG.imgBaseUrl}1428355432291766272/d/images/search.svg`}
                   alt=""
-                  className={styles.icon}
                 />
               </a>
-              <a href="/cart" data-target="#aside-cart" id="hd-cart">
-                {/* <span>1</span> */}
-                <Image
-                  src={`${CONFIG.imgBaseUrl}1428355432291766272/d/images/cart.svg`}
-                  alt=""
-                  className={styles.icon}
-                />
+              <a
+                href="/cart"
+                data-target="#aside-cart"
+                id="hd-cart"
+                className={styles.icon}
+              >
+                <Box
+                  style={{
+                    position: 'relative',
+                  }}
+                >
+                  {cartItems.length ? (
+                    <span className={styles['cart-count']}>
+                      {cartItems.length}
+                    </span>
+                  ) : (
+                    ''
+                  )}
+                  <Image
+                    src={`${CONFIG.imgBaseUrl}1428355432291766272/d/images/cart.svg`}
+                    alt=""
+                  />
+                </Box>
               </a>
               {isLogin ? (
-                <a id="login-true" href="/profile">
+                <a id="login-true" href="/profile" className={styles.icon}>
                   <Image
                     src={`${CONFIG.imgBaseUrl}1428355432291766272/d/images/user.svg`}
                     alt=""
-                    className={styles.icon}
                   />
                 </a>
               ) : (
@@ -76,11 +102,11 @@ const NavBar: NextPage = () => {
                   data-bs-toggle="modal"
                   data-bs-dismiss="modal"
                   data-bs-target="#loginModal"
+                  className={styles.icon}
                 >
                   <Image
                     src={`${CONFIG.imgBaseUrl}1428355432291766272/d/images/user.svg`}
                     alt=""
-                    className={styles.icon}
                   />
                 </a>
               )}

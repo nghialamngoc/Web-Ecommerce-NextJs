@@ -27,7 +27,7 @@ instance.interceptors.response.use(
   async (error) => {
     const { response, config = {} } = error
 
-    if (response.status === 401) {
+    if (response?.status === 401) {
       refreshTokenRequest = refreshTokenRequest
         ? refreshTokenRequest
         : getToken()

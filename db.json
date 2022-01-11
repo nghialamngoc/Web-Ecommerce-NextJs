@@ -3,5 +3,9 @@
     "content": "GIẢM 12% CHO ĐH TỪ 499K",
     "startDate": "01/01/2022",
     "endDate": "31/01/2022"
+  },
+  "cart": {
+    "cartId": "123",
+    "detail": []
   }
 }
