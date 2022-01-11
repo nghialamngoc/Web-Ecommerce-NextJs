@@ -2,8 +2,8 @@ import { Image } from '@chakra-ui/image'
 import { Box, Flex, Grid, GridItem } from '@chakra-ui/layout'
 import { NextPage } from 'next'
 import { useCallback, useEffect, useState } from 'react'
-import CONFIG from '../constants/config'
-import { getHomePageTopBanner } from '../services/homePage'
+import CONFIG from '../../constants/config'
+import { getHomePageTopBanner } from '../../services/homePage'
 
 const HomeTopBanner: NextPage = () => {
   const [isExpired, setIsExpired] = useState(false)
@@ -117,7 +117,7 @@ const HomeTopBanner: NextPage = () => {
             </Flex>
           </GridItem>
           <GridItem w="100%" colSpan={2}>
-            <Flex alignItems="center">
+            <Flex alignItems="center" justifyContent="center">
               <strong>{data.content}</strong>
               <Box marginLeft="5px" fontSize={13}>
                 NGÀY SỬ DỤNG: ( {data.startDate} - {data.endDate} )
