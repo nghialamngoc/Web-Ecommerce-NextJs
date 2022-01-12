@@ -1,6 +1,7 @@
 import { Image } from '@chakra-ui/image'
 import { Box, Flex, Grid, GridItem } from '@chakra-ui/layout'
 import { NextPage } from 'next'
+import Link from 'next/link'
 import { relative } from 'path/posix'
 import { useMemo } from 'react'
 import { useSelector } from 'react-redux'
@@ -43,16 +44,16 @@ const NavBar: NextPage = () => {
           <GridItem w="100%" colSpan={2}>
             <ul className={styles.navbar}>
               <li className={styles['navbar-item']}>
-                <a href="/new-in">New in</a>
+                <Link href="/new-in">New in</Link>
               </li>
               <li className={styles['navbar-item']}>
-                <a href="/san-pham">Tất cả sản phẩm</a>
+                <Link href="/san-pham">Tất cả sản phẩm</Link>
               </li>
               <li className={styles['navbar-item']}>
-                <a href="/community">Cộng đồng</a>
+                <Link href="/community">Cộng đồng</Link>
               </li>
               <li className={styles['navbar-item']}>
-                <a href="/chinh-sach">Chính sách</a>
+                <Link href="/chinh-sach">Chính sách</Link>
               </li>
             </ul>
           </GridItem>
