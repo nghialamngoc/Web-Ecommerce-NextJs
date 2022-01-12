@@ -4,6 +4,8 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import HomeTemplate from '../templates/home'
 import ProductList from '../components/ProductList'
+import homeBannerData from '../public/data/homeBanner.json'
+import homeProductListData from '../public/data/homeProductList.json'
 
 const HomePage: NextPage<IHomePageProps> = ({ sliderData, productList }) => {
   return (
@@ -21,13 +23,20 @@ const HomePage: NextPage<IHomePageProps> = ({ sliderData, productList }) => {
 }
 
 export async function getServerSideProps() {
-  const banner = await axios.get('http://localhost:4000/homeBanner')
-  const productList = await axios.get('http://localhost:4000/homeProductList')
-  return {
-    props: {
-      sliderData: banner,
-      productList: productList,
-    },
+  try {
+    // TODO: replace
+    // const banner = await axios.get('http://localhost:4000/homeBanner')
+    // const productList = await axios.get('http://localhost:4000/homeProductList')
+    return {
+      props: {
+        sliderData: homeBannerData,
+        productList: homeProductListData,
+      },
+    }
+  } catch (err) {
+    return {
+      props: {},
+    }
   }
 }
 

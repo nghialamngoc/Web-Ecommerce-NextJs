@@ -61,7 +61,7 @@ const HomeTopBanner: NextPage = () => {
       setIsExpired(true)
       return
     }
-  }, [data.endDate])
+  }, [data])
 
   const fetchData = async () => {
     try {
@@ -73,11 +73,15 @@ const HomeTopBanner: NextPage = () => {
   }
 
   useEffect(() => {
+    if (!data || Object.keys(data).length === 0) {
+      return
+    }
+
     getTime()
     const i = setInterval(getTime, 1000)
     setTimer(i)
     return () => clearInterval(i)
-  }, [getTime])
+  }, [getTime, data])
 
   useEffect(() => {
     fetchData()
@@ -89,7 +93,7 @@ const HomeTopBanner: NextPage = () => {
     }
   }, [isExpired, timer])
 
-  if (Object.keys(data).length === 0) {
+  if (!data || Object.keys(data).length === 0) {
     return <></>
   }
 
