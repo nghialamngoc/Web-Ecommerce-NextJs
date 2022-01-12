@@ -7,5 +7,83 @@
   "cart": {
     "cartId": "123",
     "detail": []
+  },
+  "homeBanner": [
+    {
+      "url": "/new-in",
+      "image": "https://happyhow.me/1428355432291766272/images/vi/desk/banner/banner1_1468603805565194240.jpeg",
+      "alt": "new-in"
+    },
+    {
+      "url": "",
+      "image": "https://happyhow.me/1428355432291766272/images/vi/desk/banner/banner3_1468604567984803840.jpeg",
+      "alt": ""
+    },
+    {
+      "url": "https://happyhow.me/san-pham",
+      "image": "https://happyhow.me/1428355432291766272/images/vi/desk/banner/banner2_1468815963104219136.jpeg",
+      "alt": "san-pham"
+    }
+  ],
+  "homeProductList": {
+    "total": 1,
+    "list": [
+      {
+        "product_id": "1",
+        "url": "",
+        "name": "Áo Polo Basic Nylo Gam Màu Trendy",
+        "is_new": true,
+        "list_variation": [
+          {
+            "product_id": "11",
+            "image": "https://happyhow.me/1111111111111111111/images/desk/1477959494456578048_happyhow_ao-polo_basic-nylo_030122-1.jpeg",
+            "imageIcon": "https://happyhow.me/1111111111111111111/images/attr/desk/trang_1467107723110780928.png",
+            "price": "399000",
+            "discount_price:": "290000",
+            "remain_quantity": 10
+          },
+          {
+            "product_id": "12",
+            "image": "https://happyhow.me/1111111111111111111/images/desk/1477959502559973376_happyhow_ao-polo_basic-nylo_030122-4.jpeg",
+            "imageIcon": "https://happyhow.me/1111111111111111111/images/attr/desk/vo-dau_1467128802432782336.png",
+            "price": "359000",
+            "discount_price:": "290000",
+            "remain_quantity": 0
+          },
+          {
+            "product_id": "13",
+            "image": "https://happyhow.me/1111111111111111111/images/desk/1477959523892203520_happyhow_ao-polo_basic-nylo_030122-2.jpeg",
+            "imageIcon": "https://happyhow.me/1111111111111111111/images/attr/desk/den_1473131143975931904.png",
+            "price": "399000",
+            "discount_price:": "290000",
+            "remain_quantity": 0
+          },
+          {
+            "product_id": "14",
+            "image": "https://happyhow.me/1111111111111111111/images/desk/1477959484755152896_happyhow_ao-polo_basic-nylo_030122-5.jpeg",
+            "imageIcon": "https://happyhow.me/1111111111111111111/images/attr/desk/reu_1474227035403456512.png",
+            "price": "399000",
+            "discount_price:": "290000",
+            "remain_quantity": 0
+          }
+        ]
+      },
+      {
+        "product_id": "2",
+        "url": "",
+        "name": "Áo Polo Uco Nam Chất Vải CVC",
+        "is_best": true,
+        "list_variation": [
+          {
+            "product_id": "21",
+            "image": "https://happyhow.me/1111111111111111111/images/desk/1478320734781575168_happyhow_ao-thun_panz_291221-1.jpeg",
+            "imageIcon": "https://happyhow.me/1111111111111111111/images/attr/desk/trang_1467107723110780928.png",
+            "price": "339000",
+            "discount_price:": "239000",
+            "remain_quantity": 0
+          }
+        ]
+      }
+    ]
   }
 }

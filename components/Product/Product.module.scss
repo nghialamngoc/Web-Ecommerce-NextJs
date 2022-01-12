@@ -1,0 +1,122 @@
+.product {
+  text-align: start;
+
+  &-top {
+    margin-bottom: 0.6875rem;
+    position: relative;
+    &__image {
+      background-color: #f2f2f2;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 379px;
+      }
+    }
+
+    &__out-stock {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background-image: url('https://happyhow.me/1428355432291766272/d/images/chay-hang.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 75%;
+    }
+
+    &__cart {
+      position: absolute;
+      z-index: 3;
+      bottom: 18px;
+      right: 20px;
+      background-color: white;
+      display: flex;
+      cursor: pointer;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      img {
+        width: 20px;
+      }
+    }
+
+    &__like {
+      top: 1.125rem;
+      right: 1.25rem;
+      font-size: 1.5rem;
+      position: absolute;
+      z-index: 3;
+
+      .heart-icon {
+        color: #8e9095;
+        width: 20px;
+      }
+    }
+  }
+
+  .variation-icon__active {
+    border: 2px solid #f4b301;
+  }
+
+  .new-tag {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.625rem;
+    background-color: #1b75fb;
+    color: white;
+    letter-spacing: 0.02em;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    z-index: 2;
+    padding: 0.1rem 0.6rem;
+    border-radius: 0.1875rem;
+    min-width: 4.8125rem;
+    text-align: center;
+  }
+
+  .best-tag {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.625rem;
+    background-color: #f4b301;
+    color: white;
+    letter-spacing: 0.02em;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    z-index: 2;
+    padding: 0.1rem 0.6rem;
+    border-radius: 0.1875rem;
+    min-width: 4.8125rem;
+    text-align: center;
+  }
+
+  &-bottom {
+    &__title {
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    &__colors {
+      margin: 2px 0;
+
+      .variation-icon {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+
+    &__price-new {
+      font-size: 13px;
+      margin-right: 0.4rem;
+      font-weight: 600;
+    }
+  }
+}
