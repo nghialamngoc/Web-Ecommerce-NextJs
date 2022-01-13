@@ -1,5 +1,6 @@
 import { Box, Flex } from '@chakra-ui/layout'
 import { NextPage } from 'next'
+import { useEffect } from 'react'
 import HomeFooter from '../components/HomeFooter'
 import HomeSlider from '../components/HomeSlider'
 import HomeTopBanner from '../components/HomeTopBanner'
@@ -10,6 +11,10 @@ const HomeTemplate: NextPage<IHomePageTemplateProps> = ({
   hasSlider = true,
   children,
 }) => {
+  useEffect(() => {
+    window.history.scrollRestoration = 'manual'
+  }, [])
+
   return (
     <Flex flexDir="column" minH="100vh" justifyContent="space-between">
       <Box>

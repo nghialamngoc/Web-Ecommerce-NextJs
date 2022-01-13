@@ -6,6 +6,7 @@ import HomeTemplate from '../templates/home'
 import ProductList from '../components/ProductList'
 import homeBannerData from '../public/data/homeBanner.json'
 import homeProductListData from '../public/data/homeProductList.json'
+import CONFIG from '../constants/config'
 
 const HomePage: NextPage<IHomePageProps> = ({ sliderData, productList }) => {
   return (
@@ -16,7 +17,11 @@ const HomePage: NextPage<IHomePageProps> = ({ sliderData, productList }) => {
           <meta name="description" content="Trang chủ" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <ProductList data={productList} title="SẢN PHẨM NỔI BẬT"></ProductList>
+        <ProductList
+          total={productList?.total}
+          data={productList?.list}
+          title="SẢN PHẨM NỔI BẬT"
+        ></ProductList>
       </div>
     </HomeTemplate>
   )

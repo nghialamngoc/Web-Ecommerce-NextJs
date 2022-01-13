@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { API_BASE_URL } from '../constants/endpoints'
 import { getToken } from '../helpers/auth'
 
 let refreshTokenRequest: any = null
@@ -7,14 +8,20 @@ let refreshTokenRequest: any = null
 const instance = axios.create()
 
 // Add a request interceptor
-instance.interceptors.request.use((config: any) => {
-  // Token
-  const token = getToken()
-  if (token) {
-    config.headers['Authorization'] = 'Bearer ' + token
+instance.interceptors.request.use((config) => {
+  const newConfig = {
+    ...config
   }
 
-  return config
+  // Token
+  const token = getToken()
+  if (token && newConfig.headers) {
+    newConfig.headers['Authorization'] = 'Bearer ' + token
+  }
+
+  newConfig.baseURL = API_BASE_URL
+
+  return newConfig
 })
 
 // Add a response interceptor

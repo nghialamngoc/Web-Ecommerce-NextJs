@@ -51,8 +51,11 @@ interface HomePageSliderProps {
 }
 
 interface IProductListProps {
-  data?: IProductList
+  total?: number
+  data?: Product[]
   title?: string
+  scrollable?: boolean
+  getMoreUrl?: string
 }
 
 interface IProductProps {

@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { NextPage } from 'next'
 import { useMemo, useState } from 'react'
 import CONFIG from '../../constants/config'
+import { formatMoney } from '../../helpers/format'
 import styles from './Product.module.scss'
 
 const Product: NextPage<IProductProps> = ({ data }) => {
@@ -12,6 +13,8 @@ const Product: NextPage<IProductProps> = ({ data }) => {
     useState<IProductVariation | null>(null)
 
   const onSelectVariation = (variation: IProductVariation) => {
+    console.log(variation);
+    
     setVariationSelected(variation)
   }
 
@@ -28,9 +31,9 @@ const Product: NextPage<IProductProps> = ({ data }) => {
   return (
     <div className={styles.product}>
       <div className={styles['product-top']}>
-        {
-          isOutOfStock && <Box className={styles['product-top__out-stock']}></Box>
-        }
+        {isOutOfStock && (
+          <Box className={styles['product-top__out-stock']}></Box>
+        )}
         <Box className={styles['product-top__image']}>
           <Image
             src={
@@ -88,7 +91,17 @@ const Product: NextPage<IProductProps> = ({ data }) => {
         </Grid>
 
         <p className={styles['product-bottom__price']}>
-          <span className={styles['product-bottom__price-new']}>299.000đ</span>
+          <span className={styles['product-bottom__price-new']}>
+            {variationSelected
+              ? formatMoney(
+                  variationSelected.discount_price || variationSelected.price
+                )
+              : formatMoney(
+                  data?.list_variation[0].discount_price ||
+                    data?.list_variation[0].price ||
+                    0
+                )}
+          </span>
         </p>
       </div>
     </div>

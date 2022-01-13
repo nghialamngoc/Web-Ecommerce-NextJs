@@ -1,4 +1,3 @@
-import { Button } from '@chakra-ui/button'
 import { Image } from '@chakra-ui/image'
 import { Input, InputGroup, InputRightAddon } from '@chakra-ui/input'
 import { Box, Flex, Grid, GridItem } from '@chakra-ui/layout'
@@ -9,11 +8,22 @@ import styles from './HomeFooter.module.scss'
 const HomeFooter: NextPage = () => {
   return (
     <Flex justifyContent="center" bg="#f9f9f9" fontSize="14px">
-      <Box w="100%" maxW="1274px" alignItems="center" justifyContent="center" padding={{
-        md: '20px'
-      }}>
+      <Box
+        w="100%"
+        maxW="1274px"
+        alignItems="center"
+        justifyContent="center"
+        padding={{
+          md: '20px',
+        }}
+        mt="40px"
+      >
         <Grid
-          templateColumns={{ md: 'repeat(1, 1fr)', lg: 'repeat(4, 1fr)', xl: 'repeat(6, 1fr)' }}
+          templateColumns={{
+            md: 'repeat(1, 1fr)',
+            lg: 'repeat(4, 1fr)',
+            xl: 'repeat(6, 1fr)',
+          }}
           gap={6}
         >
           <GridItem
